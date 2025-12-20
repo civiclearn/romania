@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test Gratuit – 20 Întrebări pentru Interviul de Cetățenie Română | InterviuCetatenie.ro</title>
+<!-- ===============================
+     SEO META
+================================== -->
+<meta name="description" content="Faceți un test gratuit cu 20 de întrebări din interviul de cetățenie română. Simulare reală ANC cu timer, scor, grafic al răspunsurilor și rezultat final.">
+<meta name="keywords" content="test cetățenie română, test gratuit cetățenie, simulare interviu ANC, întrebări cetățenie română, test cetatenie romania online">
+
+<link rel="canonical" href="https://interviucetatenie.ro/test-gratuit.html">
+
+<!-- ===============================
+     OPEN GRAPH
+================================== -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:title" content="Test Gratuit – 20 Întrebări pentru Interviul de Cetățenie Română">
+<meta property="og:description" content="Simulare reală cu 20 de întrebări dificile pentru interviul de cetățenie română. Află scorul, timpul și rezultatul final (reușit/nerușit).">
+<meta property="og:url" content="https://interviucetatenie.ro/test-gratuit.html">
+<meta property="og:image" content="https://interviucetatenie.ro/assets/images/og-default.jpg">
+
+<!-- ===============================
+     TWITTER CARDS
+================================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Test Gratuit – Întrebări pentru Interviul de Cetățenie Română">
+<meta name="twitter:description" content="Fă testul gratuit cu 20 de întrebări din interviul ANC și vezi dacă ești pregătit pentru cetățenia română.">
+<meta name="twitter:image" content="https://interviucetatenie.ro/assets/images/og-default.jpg">
+
+<!-- ===============================
+     JSON-LD STRUCTURED DATA
+================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "Test gratuit – Interviul de Cetățenie Română",
+  "description": "Simulare de test pentru interviul de cetățenie română, cu 20 de întrebări reale, timer și rezultat final.",
+  "url": "https://interviucetatenie.ro/test-gratuit.html",
+  "image": "https://interviucetatenie.ro/assets/images/og-default.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "InterviuCetatenie.ro"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InterviuCetatenie.ro",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://interviucetatenie.ro/assets/images/ro.svg"
+    }
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/shared.css">
+<link rel="stylesheet" href="/assets/css/testpages.css">
+
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="/index.html" class="brand-link">
+        <img src="/assets/images/ro.svg" alt="România">
+        <div class="brand-title">InterviuCetatenie.ro</div>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <nav class="header-nav">
+        <a href="/despre-interviu.html">Despre interviu</a>
+        <a href="/test-gratuit.html">Test gratuit</a>
+        <a href="/contact.html">Contact</a>
+		<a href="https://civiclearn.com/romania/login">Autentificare</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <div class="brand-powered">
+        propulsat de <span>CivicLearn</span>
+      </div>
+      <a href="https://civiclearn.com/romania/checkout.html" class="btn-small-purple">Înscriere</a>
+    </div>
+  </div>
+</header>
+
+  <!-- MAIN -->
+  <main>
+<!-- SEO Intro Block -->
+<div class="test-intro" style="max-width: 680px; margin: 0 auto 1.8rem; text-align: center; color: var(--ink-muted);">
+  Acest test gratuit pentru interviul de cetățenie română conține 20 de întrebări reale, selectate din temele studiate la ANC. 
+  Folosiți simularea pentru a vă evalua nivelul actual și a vă pregăti eficient pentru interviu.
+</div>
+
+    <div class="test-header">
+      <div>
+        <div class="badge">Test gratuit – 20 întrebări</div>
+        <div class="progress" id="progressLabel">Întrebarea 1 din 20 · Scor 0</div>
+      </div>
+      <div class="timer badge" id="timer">45:00</div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-title" id="qTitle">…</div>
+      <div class="choices" id="choices"></div>
+
+      <div class="controls">
+        <button class="btn secondary" id="btnPrev" disabled>← Înapoi</button>
+        <button class="btn" id="btnNext" disabled>Înainte →</button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="resultPanel" class="result-panel" style="display:none;">
+      <h2>Rezultatele testului</h2>
+      <div id="gradeStamp" class="result-stamp"></div>
+      <p id="resultText" class="result-text"></p>
+
+      <div class="result-chart-container">
+        <canvas id="resultChart"></canvas>
+      </div>
+
+      <div class="cta">
+        <a href="https://civiclearn.com/romania/checkout.html" class="btn">
+          Încep pregătirea completă
+        </a>
+      </div>
+    </div>
+  </main>
+
+<footer class="cl-footer">
+  <div class="cl-footer-inner">
+    © 2025 <span class="cl-footer-brand">CivicLearn</span> by Testrada — All rights reserved.
+  </div>
+</footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- JAVASCRIPT (unchanged except UI text) -->
+  <script>
+const QUESTIONS = [
+ { q:"Care este cea mai veche universitate din România, atestată în forma ei modernă în secolul al XIX-lea?", a:["Universitatea din Iași","Universitatea din București","Universitatea Babeș-Bolyai","Universitatea din Cluj (originară)"] },
+{ q:"Care ministru prezintă anual Parlamentului raportul privind starea învățământului?", a:["Ministrul Educației","Prim-ministrul","Ministrul Justiției","Ministrul Finanțelor"] },
+{ q:"Ce râu traversează capitala Moldovei, municipiul Iași?", a:["Bahlui","Prut","Siret","Tisa"] },
+{ q:"Ce instituție are competența de a controla constituționalitatea legilor înainte de promulgare?", a:["Curtea Constituțională","Înalta Curte de Casație și Justiție","Avocatul Poporului","Senatul"] },
+{ q:"Care este cea mai mare insulă a României?", a:["Insula Mare a Brăilei","Insula Ada Kaleh","Insula Sacalin","Insula Popina"] },
+{ q:"Cine este autorul romanului „Enigma Otiliei”?", a:["George Călinescu","Liviu Rebreanu","Cezar Petrescu","Hortensia Papadat-Bengescu"] },
+{ q:"Cum se numește organul administrativ care conduce județul între ședințele Consiliului Județean?", a:["Președintele Consiliului Județean","Prefectul","Subprefectul","Primarul municipiului reședință"] },
+{ q:"Care ansamblu monahal este supranumit «Ierusalimul neamului românesc»?", a:["Mănăstirea Putna","Mănăstirea Voroneț","Mănăstirea Cozia","Mănăstirea Curtea de Argeș"] },
+{ q:"Care este cel mai înalt vârf din Munții Rodnei?", a:["Pietrosul Rodnei","Ineu","Gârgalău","Corongiș"] },
+{ q:"Ce compozitor român este cunoscut pentru „Rapsodia Română”?", a:["George Enescu","Constantin Silvestri","Mihail Jora","Sabin Drăgoi"] },
+{ q:"În ce oraș se află sediul Curții de Apel care are cea mai mare arie de competență teritorială?", a:["Timișoara","Cluj-Napoca","Constanța","Iași"] },
+{ q:"Care este principala obligație a cetățenilor români în raport cu apărarea țării, conform Constituției?", a:["Fidelitatea față de țară","Participarea obligatorie la recrutare","Deținerea de pașaport valid","Plata unei taxe speciale de apărare"] },
+{ q:"Ce munte izolat din Dobrogea este un important sit arheologic și natural?", a:["Munții Măcinului","Dealul Patriarhiei","Masivul Ceahlău","Podișul Sucevei"] },
+{ q:"Ce poet român este asociat cu curentul simbolist și a scris volumul „Poemele luminii”?", a:["Lucian Blaga","Ion Barbu","George Bacovia","Ștefan Petică"] },
+{ q:"Care municipiu este reședința județului Covasna?", a:["Sfântu Gheorghe","Târgu Secuiesc","Brașov","Miercurea Ciuc"] },
+{ q:"Care este durata maximă a unei ședințe de guvern secretizate conform legislației actuale?", a:["Nu este prevăzută explicit; se aplică durata stabilită de prim-ministru","30 de minute","60 de minute","120 de minute"] },
+{ q:"Ce sculptor român este cunoscut pentru ansamblul monumental de la Târgu Jiu?", a:["Constantin Brâncuși","Ion Irimescu","Oscar Han","Cornel Medrea"] },
+{ q:"În ce an România a devenit membră a Consiliului Europei?", a:["1993","1991","1995","1997"] },
+{ q:"Care este cel mai mare lac glaciar din România?", a:["Lacul Bucura","Lacul Bâlea","Lacul Capra","Lacul iezer (Retezat)"] },
+{ q:"Cum se numește dreptul constituțional al cetățeanului de a sesiza instituțiile statului în legătură cu funcționarea administrației?", a:["Dreptul de petiționare","Dreptul la inițiativă legislativă","Dreptul la asociere","Dreptul la moțiune"] }
+
+];
+
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const model = QUESTIONS.map((item, idx) => {
+  const correct = item.a[0];
+  const shuffled = shuffle(item.a);
+  return {
+    index: idx,
+    text: item.q,
+    choices: shuffled.map(opt => ({ text: opt, isCorrect: opt === correct })),
+    answered: false,
+    pickedIndex: -1
+  };
+});
+
+const qTitle = document.getElementById('qTitle');
+const choicesEl = document.getElementById('choices');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+const progressLabel = document.getElementById('progressLabel');
+const resultPanel = document.getElementById('resultPanel');
+const gradeStamp = document.getElementById('gradeStamp');
+const resultText = document.getElementById('resultText');
+const timerEl = document.getElementById('timer');
+
+let qi = 0, score = 0;
+const total = model.length;
+let timerSec = 45 * 60;
+
+const timerInt = setInterval(() => {
+  timerSec--;
+  if (timerSec < 0) { clearInterval(timerInt); finishTest(); return; }
+  const m = Math.floor(timerSec / 60).toString().padStart(2, '0');
+  const s = (timerSec % 60).toString().padStart(2, '0');
+  timerEl.textContent = `${m}:${s}`;
+}, 1000);
+
+function renderQuestion() {
+  const q = model[qi];
+  qTitle.textContent = q.text;
+  choicesEl.innerHTML = '';
+  q.choices.forEach((c, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice' + (q.answered ? ' disabled' : '');
+    btn.textContent = c.text;
+    btn.addEventListener('click', () => pick(idx));
+    choicesEl.appendChild(btn);
+  });
+
+  btnPrev.disabled = (qi === 0);
+  btnNext.disabled = !q.answered;
+
+  progressLabel.textContent = `Întrebarea ${qi + 1} din ${total} · Scor ${score}`;
+
+  if (q.answered) applyRevealStyles();
+
+  if (qi === total - 1) btnNext.textContent = "Vezi rezultatele →";
+  else btnNext.textContent = "Înainte →";
+}
+
+function pick(idx) {
+  const q = model[qi];
+  if (q.answered) return;
+
+  q.answered = true;
+  q.pickedIndex = idx;
+
+  if (q.choices[idx].isCorrect) score++;
+
+  applyRevealStyles();
+
+  btnNext.disabled = false;
+  progressLabel.textContent = `Întrebarea ${qi + 1} din ${total} · Scor ${score}`;
+
+  if (qi === total - 1) btnNext.textContent = "Vezi rezultatele →";
+}
+
+function applyRevealStyles() {
+  const q = model[qi];
+  const buttons = choicesEl.querySelectorAll('.choice');
+  buttons.forEach((b, i) => {
+    b.classList.add('disabled');
+    if (q.choices[i].isCorrect) b.classList.add('correct');
+    if (q.pickedIndex === i && !q.choices[i].isCorrect) b.classList.add('wrong');
+  });
+}
+
+btnNext.addEventListener('click', () => {
+  if (qi < total - 1) {
+    qi++;
+    renderQuestion();
+  } else {
+    finishTest();
+  }
+});
+
+btnPrev.addEventListener('click', () => {
+  if (qi > 0) {
+    qi--;
+    renderQuestion();
+  }
+});
+
+function finishTest() {
+  clearInterval(timerInt);
+  document.querySelector('.question-card').style.display = 'none';
+  resultPanel.style.display = 'block';
+
+  const wrong = total - score;
+  const pass = score >= 15;
+
+  gradeStamp.textContent = pass ? "Test reușit!" : "Test nereușit";
+  gradeStamp.className = "result-stamp " + (pass ? "pass" : "fail");
+
+  resultText.textContent =
+    `Scor final: ${score} / ${total} (${Math.round(score / total * 100)}%). ` +
+    `Răspunsuri corecte: ${score}. Răspunsuri greșite: ${wrong}.`;
+
+  renderChart(score, wrong);
+}
+
+function renderChart(correct, wrong) {
+  const ctx = document.getElementById('resultChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Corecte', 'Greșite'],
+      datasets: [{ data: [correct, wrong] }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        title: { display: true, text: 'Repartiția răspunsurilor' }
+      }
+    }
+  });
+}
+
+renderQuestion();
+  </script>
+
+</body>
+</html>

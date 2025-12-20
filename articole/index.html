@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articole despre interviul de cetățenie română</title>
+  <!-- ===============================
+     SEO META
+================================== -->
+<meta name="description" content="Toate articolele despre interviul de cetățenie română: ghiduri, explicații, legislație, exemple de întrebări și sfaturi pentru pregătirea interviului ANC.">
+<meta name="keywords" content="articole cetățenie română, interviu cetățenie articole, ghid pregătire cetățenie, întrebări interviu ANC, legislație cetățenie română">
+
+<link rel="canonical" href="https://interviucetatenie.ro/articole/">
+
+<!-- ===============================
+     OPEN GRAPH
+================================== -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:title" content="Articole despre interviul de cetățenie română – Ghiduri și explicații">
+<meta property="og:description" content="Colecție completă de articole despre interviul de cetățenie română: legislație, cultură, exemple de întrebări și sfaturi pentru pregătire.">
+<meta property="og:url" content="https://interviucetatenie.ro/articole/">
+<meta property="og:image" content="https://interviucetatenie.ro/assets/images/og-default.jpg">
+
+<!-- ===============================
+     TWITTER CARDS
+================================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Articole despre interviul de cetățenie română">
+<meta name="twitter:description" content="Ghiduri, informații și articole pentru pregătirea interviului ANC.">
+<meta name="twitter:image" content="https://interviucetatenie.ro/assets/images/og-default.jpg">
+
+<!-- ===============================
+     JSON-LD STRUCTURED DATA
+================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Articole despre interviul de cetățenie română",
+  "description": "Colecție completă de articole dedicate pregătirii pentru interviul de cetățenie română, incluzând ghiduri, legislație și exemple de întrebări ANC.",
+  "url": "https://interviucetatenie.ro/articole/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "InterviuCetatenie.ro",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://interviucetatenie.ro/assets/images/ro.svg"
+    }
+  }
+}
+</script>
+
+
+  <link rel="stylesheet" href="/assets/css/shared.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="/index.html" class="brand-link">
+        <img src="/assets/images/ro.svg" alt="RO">
+        <div class="brand-title">InterviuCetatenie.ro</div>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <nav class="header-nav">
+        <a href="/despre-interviu.html">Despre interviu</a>
+        <a href="/test-gratuit.html">Test gratuit</a>
+        <a href="/contact.html">Contact</a>
+		<a href="https://civiclearn.com/romania/login">Autentificare</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <div class="brand-powered">propulsat de <span>CivicLearn</span></div>
+      <a href="https://civiclearn.com/romania/checkout.html" class="btn-small-purple">Înscriere</a>
+    </div>
+  </div>
+</header>
+
+<div class="blog-container">
+  <h1>Articole despre interviul de cetățenie română</h1>
+  <p>Toate ghidurile, explicațiile și articolele într-un singur loc.</p>
+
+  <section class="blog-index-list" id="articles-list">
+    <!-- Injected by JS -->
+  </section>
+</div>
+
+<footer class="cl-footer">
+  <div class="cl-footer-inner">
+    © 2025 <span class="cl-footer-brand">CivicLearn</span> by Testrada — All rights reserved.
+  </div>
+</footer>
+
+<script>
+  async function loadArticlesHub() {
+    const container = document.getElementById('articles-list');
+    if (!container) return;
+
+    try {
+      const res = await fetch('/articole/articles.json');
+      if (!res.ok) throw new Error('Nu pot încărca lista.');
+      const articles = await res.json();
+
+      container.innerHTML = '';
+      articles.forEach(a => {
+        const el = document.createElement('article');
+        el.className = 'blog-index-item';
+        el.innerHTML = `
+          <h2><a href="/articole/${a.slug}/">${a.title}</a></h2>
+          <p>${a.excerpt}</p>
+        `;
+        container.appendChild(el);
+      });
+    } catch (err) {
+      container.innerHTML = '<p>Nu am putut încărca articolele.</p>';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadArticlesHub);
+</script>
+</body>
+</html>

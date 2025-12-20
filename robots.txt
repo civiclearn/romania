@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+# Optional: block internal folders if they exist
+# Disallow: /assets/
+# Disallow: /private/
+# Disallow: /drafts/
+
+Sitemap: https://interviucetatenie.ro/sitemap.xml

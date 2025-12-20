@@ -1,0 +1,273 @@
+/* -------------------------------------------------------
+   BASIC LAYOUT
+------------------------------------------------------- */
+
+.blog-container {
+  max-width: 780px;
+  margin: 60px auto;
+  padding: 0 22px 60px 22px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* -------------------------------------------------------
+   HEADINGS
+------------------------------------------------------- */
+
+.blog-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.blog-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 44px;
+  margin-bottom: 18px;
+}
+
+.blog-container h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+/* -------------------------------------------------------
+   TEXT
+------------------------------------------------------- */
+
+.blog-container p {
+  font-size: 18px;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.blog-container strong {
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------
+   LINKS
+------------------------------------------------------- */
+
+.blog-container a {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------
+   LISTS
+------------------------------------------------------- */
+
+.blog-container ul,
+.blog-container ol {
+  margin-bottom: 22px;
+  padding-left: 28px;
+}
+
+.blog-container li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* -------------------------------------------------------
+   QUOTES
+------------------------------------------------------- */
+
+.blog-container blockquote {
+  border-left: 4px solid #7c3aed;
+  padding-left: 18px;
+  margin: 30px 0;
+  color: #444;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------
+   REMOVE GUTENBERG EMPTY SPACES
+------------------------------------------------------- */
+
+.wp-block-post-featured-image {
+  display: none !important;
+}
+
+figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* -------------------------------------------------------
+   TABLES
+------------------------------------------------------- */
+
+.blog-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 22px 0;
+}
+
+.blog-container th,
+.blog-container td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.blog-container th {
+  background: #f2e8ff;
+}
+
+/* -------------------------------------------------------
+   REMOVE INNER WHITE BACKGROUNDS FROM WORDPRESS EXPORT
+------------------------------------------------------- */
+
+.blog-container > * {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* remove Gutenberg group backgrounds */
+.wp-block-group,
+.wp-container,
+.wp-block-columns,
+.wp-block-column {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* remove paragraph margins inserted by themes */
+.has-background,
+.wp-block-group.has-background {
+  background: transparent !important;
+}
+
+/* ensure list containers don't create nested cards */
+ul, ol {
+  background: transparent !important;
+}
+
+/* ensure figure elements do not create invisible boxes */
+figure {
+  background: transparent !important;
+  border: none !important;
+  margin: 0 0 1.5rem 0 !important;
+  padding: 0 !important;
+}
+
+/* ============================================================
+   BREADCRUMBS — CLEAN, SUBTLE, ALIGNED
+   ============================================================ */
+
+.blog-breadcrumbs {
+  font-size: 14px;
+  color: #7b7490;
+  margin-bottom: 18px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.blog-breadcrumbs a {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-breadcrumbs .sep {
+  color: #aaa;
+}
+
+.blog-breadcrumbs .current {
+  color: #555;
+  font-weight: 600;
+}
+
+/* fix spacing from top */
+.blog-back-home {
+  margin-bottom: 18px;
+}
+
+.blog-back-home a {
+  color: #7c3aed;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   RELATED ARTICLES — MINIMAL, CLEAN, CARD-STYLE ROW
+   ============================================================ */
+
+.blog-related {
+  max-width: 780px;
+  margin: 40px auto 30px auto;    /* space above & below */
+  padding: 24px 22px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.06);
+}
+
+.blog-related h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: left;
+  color: #2d2b33;
+}
+
+.blog-related ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.blog-related li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.blog-related a {
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+.blog-related a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   SEPARATION FROM FOOTER
+   ============================================================ */
+
+.cl-footer {
+  margin-top: 40px !important; /* push footer down for breathing */
+}
+
+
+/* -------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .blog-container {
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .blog-container h1 {
+    font-size: 28px;
+  }
+
+  .blog-container h2 {
+    font-size: 24px;
+  }
+}
