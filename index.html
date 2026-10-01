@@ -55,321 +55,275 @@
 }
 </script>
 
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
- <link rel="stylesheet" href="/assets/css/newhome.css">
+  <link rel="stylesheet" href="/assets/css/home-v2.css">
 </head>
-
-
 <body>
-<header class="cl-header">
-  <div class="cl-header-inner">
 
-    <a href="/" class="cl-logo">
-      <img src="/assets/images/ro.svg" alt="RO" />
-      <span>InterviuCetatenie.ro</span>
-    </a>
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="/" class="logo logo-long"><img alt="RO" src="/assets/images/ro.svg"/><span>InterviuCetatenie.ro</span></a>
 
-    <nav class="cl-nav">
+    <button class="burger" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="site-nav"
+      onclick="var o=document.getElementById('hdr').classList.toggle('menu-open');this.setAttribute('aria-expanded',o)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+
+    <nav class="nav" id="site-nav">
       <a href="/despre-interviu.html">Despre interviu</a>
       <a href="/test-gratuit.html">Test gratuit</a>
       <a href="/contact.html">Contact</a>
-	  <a href="https://civiclearn.com/romania/login">Autentificare</a>
+      <a href="https://civiclearn.com/romania/login">Autentificare</a>
     </nav>
 
-    <div class="cl-right">
-      <div class="cl-powered">
-        propulsat de <span>CivicLearn</span>
+    <div class="hdr-right">
+      <div class="powered">
+        <div>propulsat de <b>CivicLearn</b></div>
+        <a class="tp" href="https://www.trustpilot.com/review/civiclearn.com" target="_blank" rel="noopener" aria-label="CivicLearn pe Trustpilot: 4,5 din 5">
+          <span class="tp-stars" aria-hidden="true">
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="12.5" height="25" fill="#00b67a"/><rect x="12.5" width="12.5" height="25" fill="#dcdce6"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+          </span>
+          <span class="tp-word">Trustpilot</span>
+        </a>
       </div>
-
-      <a href="https://civiclearn.com/romania/checkout.html" class="cl-btn">
-        Înscriere
-      </a>
+      <a href="https://civiclearn.com/romania/checkout.html" class="btn btn-primary">Înscriere</a>
     </div>
-
   </div>
 </header>
 
+<main>
 
-
-
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-center">
-
-    <div class="hero-kicker">
-      <div class="hero-kicker-dot"></div>
-      Platformă completă pentru interviul de cetățenie
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Platformă completă pentru interviul de cetățenie</span>
+      <h1><span>Interviul pentru cetățenia română:</span> Pregătiți-vă online, simplu și eficient.</h1>
+      <p class="hero-sub">Peste 800 de întrebări reale și actualizate, acoperind limba română, Constituția, instituțiile statului, istoria, geografia și cultura națională.</p>
+      <div class="hero-ctas">
+        <a href="https://civiclearn.com/romania/checkout.html" class="btn btn-primary" id="hero-cta">Încep pregătirea</a>
+        <a href="#intrebari-proba" class="btn btn-ghost">Văd întrebări de probă</a>
+      </div>
+      <p class="hero-meta"><strong>129 lei, plată unică</strong> · acces pe viață · fără abonament</p>
+      <div class="rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>Excelent</strong>
+        <span>Bazat pe recenzii verificate din 2024.</span>
+      </div>
     </div>
-
-    <h1 class="hero-title">
-      <span>Interviul pentru cetățenia română:</span>
-      Pregătiți-vă online, simplu și eficient.
-    </h1>
-
-    <p class="hero-subtitle">
-Peste 800 de întrebări reale și actualizate, acoperind limba română, Constituția, instituțiile statului, istoria, geografia și cultura națională.
-    </p>
-
-    <div class="hero-actions">
-      <a href="https://civiclearn.com/romania/checkout.html" class="hero-primary-btn">Încep pregătirea</a>
-      <a href="#intrebari-proba" class="hero-secondary-btn">Văd întrebări de probă</a>
-    </div>
-
-<div class="hero-social">
-    <span class="rating-stars">★★★★★</span>
-    <span class="rating-word">Excelent</span>
-    <span class="rating-subtext">Bazat pe recenzii verificate din 2024.</span>
-</div>
-
-
-    <div class="hero-image-wide">
-      <img src="/assets/images/mockup.webp">
-    </div>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="section-heading">
-    <div class="section-kicker">Pregătire structurată</div>
-    <h2 class="section-title">Tot ce aveți nevoie pentru un interviu reușit</h2>
-    <p class="section-lead">Întrebări tip grilă, exerciții și exemple clare.</p>
-  </div>
-
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon"><img src="/assets/images/icons/1.svg"></div>
-      <h3 class="feature-title">Temele de bază</h3>
-      <p class="feature-text">Istoria, geografia, instituțiile statului, simbolurile și cultura României.</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-icon"><img src="/assets/images/icons/2.svg"></div>
-      <h3 class="feature-title">Exerciții și exemple</h3>
-      <p class="feature-text">Întrebări inspirate din experiența candidaților și situațiile reale de interviu.</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-icon"><img src="/assets/images/icons/3.svg"></div>
-      <h3 class="feature-title">Încredere la interviu</h3>
-      <p class="feature-text">Exersați până vă simțiți pregătit și sigur pe răspunsurile dvs.</p>
+    <div class="hero-img">
+      <img src="/assets/images/mockup.webp" alt="" width="2078" height="1305" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
 
-<div id="intrebari-proba">
-<section class="inline-test">
-  <div class="inline-test-inner">
 
-    <h2 class="inline-test-title">Încercați gratuit întrebări reale de la interviul de cetățenie</h2>
-    <p class="inline-test-subtitle">Rezolvați câteva întrebări pentru a vedea formatul și nivelul.</p>
-
-    <!-- CTA always visible -->
-    <div class="inline-test-cta-top">
-      <a href="https://civiclearn.com/romania/checkout.html" class="hero-primary-btn">Acces complet · 800+ întrebări</a>
+<!-- FEATURES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Pregătire structurată</span>
+      <h2>Tot ce aveți nevoie pentru un interviu reușit</h2>
+      <p>Întrebări tip grilă, exerciții și exemple clare.</p>
     </div>
-
-<div class="inline-progress-container">
-  <div class="inline-test-inner">
-    <div id="inline-progress-text"></div>
-    <div class="inline-progressbar-wrapper">
-      <div id="inline-progressbar"></div>
+    <div class="features">
+      <div class="feature">
+        <img src="/assets/images/icons/1.svg" alt="">
+        <h3>Temele de bază</h3>
+        <p>Istoria, geografia, instituțiile statului, simbolurile și cultura României.</p>
+      </div>
+      <div class="feature">
+        <img src="/assets/images/icons/2.svg" alt="">
+        <h3>Exerciții și exemple</h3>
+        <p>Întrebări inspirate din experiența candidaților și situațiile reale de interviu.</p>
+      </div>
+      <div class="feature">
+        <img src="/assets/images/icons/3.svg" alt="">
+        <h3>Încredere la interviu</h3>
+        <p>Exersați până vă simțiți pregătit și sigur pe răspunsurile dvs.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- QUESTIONS -->
-<div class="inline-test-inner">
-  <div id="inline-test-questions"></div>
-</div>
-
-<!-- PRICING SECTION -->
-<section class="premium-pricing">
-  <div class="pricing-card">
-
-    <!-- Gradient header -->
-    <div class="pricing-top">
-      <span class="pricing-tag">Acces Premium</span>
+<!-- FREE QUESTIONS (rendered by /assets/js/hometest.js) -->
+<section class="section quiz" id="intrebari-proba">
+  <div class="wrap">
+    <div class="quiz-top">
+      <div class="section-head">
+        <span class="kicker">Exersare gratuită</span>
+        <h2>Încercați gratuit întrebări reale de la interviul de cetățenie</h2>
+        <p>Rezolvați câteva întrebări pentru a vedea formatul și nivelul.</p>
+      </div>
+      <a href="https://civiclearn.com/romania/checkout.html" class="btn btn-ghost">Acces complet · 800+ întrebări</a>
     </div>
-
-    <!-- Price -->
-    <div class="pricing-price">
-      <div class="amount">129 lei</div>
-      <div class="subtitle">Plată unică — acces pe viață</div>
+    <div class="progress">
+      <div id="inline-progress-text"></div>
+      <div class="progress-track"><div id="inline-progressbar"></div></div>
     </div>
+    <div id="inline-test-questions"></div>
+  </div>
+</section>
 
-    <div class="pricing-divider"></div>
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Un preț simplu</span>
+      <h2>Totul inclus, pe viață</h2>
+    </div>
+    <div class="price-card">
+      <div class="price-left">
+        <span class="price-tag">Acces Premium</span>
+        <div class="price-amount">129 lei<small>o singură dată</small></div>
+        <p class="price-sub">Acces pe viață. Plătiți o dată și exersați cât aveți nevoie.</p>
+        <a class="btn btn-primary" href="https://civiclearn.com/romania/checkout.html">Încep pregătirea acum</a>
+        <p class="price-note">Fără abonament · Activare imediată</p>
+      </div>
+      <div class="price-right">
+        <h3>Ce primiți</h3>
+        <ul class="checks">
+          <li>Peste 800 de întrebări oficiale și actualizate</li>
+          <li>Simulări cronometrate, ca la interviul real</li>
+          <li>Teste rapide pentru exersare zilnică</li>
+          <li>Teste pe teme: România, societate, cultură, valori</li>
+          <li>Întrebări-capcană – greșelile cel mai des întâlnite</li>
+          <li>Istoricul testelor și evoluția punctajului</li>
+          <li>Flashcard-uri pentru memorare rapidă</li>
+          <li>Exersare pe subiecte și capitole</li>
+          <li>Redare audio pentru toate întrebările</li>
+          <li>Memento zilnic pentru antrenament</li>
+          <li>Acces de pe telefon, tabletă și calculator</li>
+          <li>Activare imediată după confirmarea plății</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Features -->
-    <ul class="feature-list">
-      <li>Peste 800 de întrebări oficiale și actualizate</li>
-      <li>Simulări cronometrate, ca la interviul real</li>
-      <li>Teste rapide pentru exersare zilnică</li>
-      <li>Teste pe teme: România, societate, cultură, valori</li>
-      <li>Întrebări-capcană – greșelile cel mai des întâlnite</li>
-      <li>Istoricul testelor și evoluția punctajului</li>
-      <li>Flashcard-uri pentru memorare rapidă</li>
-      <li>Exersare pe subiecte și capitole</li>
-      <li>Redare audio pentru toate întrebările</li>
-      <li>Memento zilnic pentru antrenament</li>
-      <li>Acces de pe telefon, tabletă și calculator</li>
-      <li>Activare imediată după confirmarea plății</li>
-    </ul>
+<!-- TESTIMONIALS -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">De la utilizatori</span>
+      <h2>Ce spun cei care au folosit platforma</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>„Simulările cronometrate m-au ajutat enorm. În ziua interviului m-am simțit ca într-un test obișnuit.”</p>
+        <figcaption class="quote-by"><img src="/assets/images/avatar1.png" alt="" width="40" height="40">Alina M.</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>„Întrebările-capcană chiar fac diferența. Am înțeles exact unde greșeam și mi-am dublat scorul.”</p>
+        <figcaption class="quote-by"><img src="/assets/images/avatar2.png" alt="" width="40" height="40">Igor P.</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>„Mi-am făcut rutină testul zilnic. Am trecut interviul fără emoții și am recomandat platforma mai departe.”</p>
+        <figcaption class="quote-by"><img src="/assets/images/avatar3.png" alt="" width="40" height="40">Renata D.</figcaption>
+      </figure>
+    </div>
+    <p class="quotes-more">Mai multe recenzii despre CivicLearn pe <a href="https://www.trustpilot.com/review/civiclearn.com" target="_blank" rel="noopener">Trustpilot</a>.</p>
+  </div>
+</section>
 
-    <a class="pricing-cta" href="https://civiclearn.com/romania/checkout.html">
-      Încep pregătirea acum
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="section-head">
+      <span class="kicker">Întrebări frecvente</span>
+      <h2>Întrebări și răspunsuri</h2>
+      <p>Altă întrebare? <a href="/contact.html">Scrieți-ne</a>.</p>
+    </div>
+    <div class="faq-list">
+      <details><summary>Cât timp este valabil accesul?</summary><p>Accesul este pe viață. Plătiți o singură dată.</p></details>
+      <details><summary>Aceste întrebări sunt cele de la interviu?</summary><p>Întrebările sunt construite pe baza temelor publicate oficial și reflectă tipurile de întrebări cel mai des întâlnite de candidați în practică.</p></details>
+      <details><summary>Câte întrebări trebuie să știu pentru interviu?</summary><p>Nu există o listă unică și oficială de întrebări. Comisia poate adresa orice întrebare din temele anunțate, de aceea este utilă o pregătire variată.</p></details>
+      <details><summary>Cum mă ajută platforma concret la interviu?</summary><p>Prin simulări cronometrate, întrebări-capcană, teste pe subiecte și explicații scurte. Exersați exact tipul de conținut cerut la interviu.</p></details>
+      <details><summary>Trebuie să descarc ceva?</summary><p>Nu. Platforma funcționează direct în browser pe telefon, tabletă și calculator.</p></details>
+      <details><summary>Dacă nu am timp zilnic, mă pot organiza?</summary><p>Da. Funcția de test zilnic și istoricul progresului vă ajută să rămâneți constant și să vedeți unde aveți nevoie de mai multă practică.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Lecturi utile</span>
+      <h2>Articole recomandate</h2>
+      <p>Câteva articole utile pentru pregătirea interviului de cetățenie.</p>
+    </div>
+    <style> #home-articles-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;} @media(max-width:900px){#home-articles-list{grid-template-columns:repeat(2,1fr);}} @media(max-width:520px){#home-articles-list{grid-template-columns:1fr;}} #home-articles-list .ha-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5e1da;border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s;} #home-articles-list .ha-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08);} #home-articles-list .ha-card img{width:100%;height:150px;object-fit:cover;display:block;} #home-articles-list .ha-card .ha-body{padding:14px 16px;} #home-articles-list .ha-card h3{margin:0 0 6px;font-size:1rem;line-height:1.3;color:#1a1a2e;} #home-articles-list .ha-card p{margin:0;font-size:.85rem;line-height:1.45;color:#6b7280;} </style> <div id="home-articles-list"></div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section style="padding:0 0 40px">
+  <div class="wrap">
+    <div class="closing">
+      <div>
+        <h2>Pregătit pentru interviul de cetățenie?</h2>
+        <p>Întrebări tip grilă, exerciții și exemple concrete pentru interviu, într-un singur loc. 129 lei, o singură dată.</p>
+      </div>
+      <a href="https://civiclearn.com/romania/checkout.html" class="btn btn-primary">Încep pregătirea</a>
+    </div>
+  </div>
+</section>
+
+<!-- RANKING + DEVICES -->
+<section style="padding:24px 0 0">
+  <div class="wrap">
+    <a class="rank" href="https://civiclearn.com/passport-ranking">
+      <span class="rank-tag">CLASAMENT</span>
+      <span><strong>Un pașaport românesc îți deschide toată Europa</strong> — dreptul de a locui și munci în toată UE.</span>
+      <span class="rank-go">Vezi clasamentul →</span>
     </a>
-
-  </div>
-
-  <div class="pricing-guarantee">
-    Plată o singură dată. Nicio reînnoire automată.
+    <div class="devices" aria-label="Compatibil cu toate dispozitivele și browserele moderne">
+      <span><img src="/assets/images/logos/windows.svg" alt="">Windows</span>
+      <span><img src="/assets/images/logos/macos.svg" alt="">macOS</span>
+      <span><img src="/assets/images/logos/android.svg" alt="">Android</span>
+      <span><img src="/assets/images/logos/ios.svg" alt="">iPhone / iPad</span>
+      <span><img src="/assets/images/logos/chrome.svg" alt="">Chrome</span>
+      <span><img src="/assets/images/logos/safari.svg" alt="">Safari</span>
+      <span><img src="/assets/images/logos/firefox.svg" alt="">Firefox</span>
+    </div>
   </div>
 </section>
 
+</main>
 
-<section class="cl-testimonials">
-  <div class="cl-testimonials-header">
-    <h2>Ce spun cei care au folosit platforma</h2>
-    <p>Experiențe reale ale cursanților noștri</p>
+<footer class="foot">
+  <div class="wrap">
+    <div>© 2026 InterviuCetatenie.ro – parte din rețeaua CivicLearn.</div>
+    <nav>
+      <a href="https://civiclearn.com/insights">Insights</a>
+      <a href="/test-gratuit.html">Test gratuit</a>
+      <a href="/despre-interviu.html">Despre interviu</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/confidentialitate.html">Confidențialitate</a>
+      <a href="/termeni.html">Termeni</a>
+    </nav>
   </div>
+</footer>
 
-  <div class="cl-testimonials-grid">
+<!-- Mobile sticky CTA (appears once the hero button scrolls away, hides over pricing) -->
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <span><b>129 lei, o dată</b>Acces pe viață</span>
+  <a href="https://civiclearn.com/romania/checkout.html" class="btn btn-primary" tabindex="-1">Începeți</a>
+</div>
 
-    <div class="cl-testimonial-card">
-      <div class="cl-testimonial-avatar">
-        <img src="/assets/images/avatar1.png" alt="">
-      </div>
-      <p class="cl-testimonial-text">
-        „Simulările cronometrate m-au ajutat enorm. În ziua interviului m-am simțit ca într-un test obișnuit.”
-      </p>
-      <div class="cl-testimonial-author">Alina M.</div>
-    </div>
-
-    <div class="cl-testimonial-card">
-      <div class="cl-testimonial-avatar">
-        <img src="/assets/images/avatar2.png" alt="">
-      </div>
-      <p class="cl-testimonial-text">
-        „Întrebările-capcană chiar fac diferența. Am înțeles exact unde greșeam și mi-am dublat scorul.”
-      </p>
-      <div class="cl-testimonial-author">Igor P.</div>
-    </div>
-
-    <div class="cl-testimonial-card">
-      <div class="cl-testimonial-avatar">
-        <img src="/assets/images/avatar3.png" alt="">
-      </div>
-      <p class="cl-testimonial-text">
-        „Mi-am făcut rutină testul zilnic. Am trecut interviul fără emoții și am recomandat platforma mai departe.”
-      </p>
-      <div class="cl-testimonial-author">Renata D.</div>
-    </div>
-
-  </div>
-</section>
-
-
-
-<section class="cl-faq">
-
-  <div class="section-heading">
-    <div class="section-kicker">Întrebări frecvente</div>
-    <h2 class="section-title">Întrebări și răspunsuri</h2>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Cât timp este valabil accesul?</span>
-    </div>
-    <div class="faq-answer">
-      <p>Accesul este pe viață. Plătiți o singură dată.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Aceste întrebări sunt cele de la interviu?</span>
-    </div>
-    <div class="faq-answer">
-      <p>Întrebările sunt construite pe baza temelor publicate oficial și reflectă tipurile de întrebări cel mai des întâlnite de candidați în practică.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Câte întrebări trebuie să știu pentru interviu?</span>
-    </div>
-    <div class="faq-answer">
-      <p>Nu există o listă unică și oficială de întrebări. Comisia poate adresa orice întrebare din temele anunțate, de aceea este utilă o pregătire variată.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Cum mă ajută platforma concret la interviu?</span>
-    </div>
-    <div class="faq-answer">
-      <p>Prin simulări cronometrate, întrebări-capcană, teste pe subiecte și explicații scurte. Exersați exact tipul de conținut cerut la interviu.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Trebuie să descarc ceva?</span>
-    </div>
-    <div class="faq-answer">
-      <p>Nu. Platforma funcționează direct în browser pe telefon, tabletă și calculator.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Dacă nu am timp zilnic, mă pot organiza?</span>
-    </div>
-    <div class="faq-answer">
-      <p>Da. Funcția de test zilnic și istoricul progresului vă ajută să rămâneți constant și să vedeți unde aveți nevoie de mai multă practică.</p>
-    </div>
-  </div>
-
-</section>
-
-<section class="home-articles">
-  <div class="blog-container">
-    <h2>Articole recomandate</h2>
-    <p>Câteva articole utile pentru pregătirea interviului de cetățenie.</p>
-
-    <!-- PASSPORT RANKING STRIP — Articole recomandate (further-reading pointer → ranking page). Romanian copy: native review recommended. -->
-    <a href="https://civiclearn.com/passport-ranking"
-       style="display:flex;align-items:center;gap:14px;max-width:820px;margin:0 auto 24px;padding:13px 22px;background:#fff;border:1px solid #e5e1da;border-left:3px solid #7c3aed;border-radius:12px;text-decoration:none;color:#1d2230;text-align:left;transition:border-color .15s,box-shadow .15s;"
-       onmouseover="this.style.borderColor='#7c3aed';this.style.boxShadow='0 4px 16px rgba(124,58,237,.12)'"
-       onmouseout="this.style.borderColor='#e5e1da';this.style.borderLeftColor='#7c3aed';this.style.boxShadow='none'">
-      <span style="flex:0 0 auto;background:#f5f0ff;color:#7c3aed;font-weight:700;font-size:.7rem;letter-spacing:.02em;padding:5px 10px;border-radius:6px;white-space:nowrap;">CLASAMENT</span>
-      <span style="flex:1 1 auto;min-width:0;font-size:.86rem;line-height:1.45;color:#555;text-align:left;">
-        <strong style="color:#1a1a2e;">Un pașaport românesc îți deschide toată Europa</strong> — dreptul de a locui și munci în toată UE.
-      </span>
-      <span style="flex:0 0 auto;color:#7c3aed;font-weight:600;font-size:.84rem;white-space:nowrap;">Vezi clasamentul &rarr;</span>
-    </a>
-
-    <style>
-      #home-articles-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;}
-      @media(max-width:900px){#home-articles-list{grid-template-columns:repeat(2,1fr);}}
-      @media(max-width:520px){#home-articles-list{grid-template-columns:1fr;}}
-      #home-articles-list .ha-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5e1da;border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s;}
-      #home-articles-list .ha-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08);}
-      #home-articles-list .ha-card img{width:100%;height:150px;object-fit:cover;display:block;}
-      #home-articles-list .ha-card .ha-body{padding:14px 16px;}
-      #home-articles-list .ha-card h3{margin:0 0 6px;font-size:1rem;line-height:1.3;color:#1a1a2e;}
-      #home-articles-list .ha-card p{margin:0;font-size:.85rem;line-height:1.45;color:#6b7280;}
-    </style>
-    <div id="home-articles-list"></div>
-  </div>
-</section>
-
-<!-- ARTICLE LOADER (inline; replaces the external articles-home.js). VERIFY the JSON path below if the grid stays empty. -->
+<script src="/assets/js/hometest.js"></script>
 <script>
 (async function () {
   const el = document.getElementById('home-articles-list');
@@ -391,93 +345,33 @@ Peste 800 de întrebări reale și actualizate, acoperind limba română, Consti
   } catch (e) { /* leave the section empty if the fetch fails */ }
 })();
 </script>
-
-
-
-
-
-<section class="compat-section">
-  <div class="compat-inner">
-
-    <h2 class="compat-title">
-      Compatibil cu toate dispozitivele și browserele moderne
-    </h2>
-
-    <div class="compat-grid">
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/windows.svg" alt="Windows">
-        <p>Windows</p>
-      </div>
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/macos.svg" alt="macOS">
-        <p>macOS</p>
-      </div>
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/android.svg" alt="Android">
-        <p>Android</p>
-      </div>
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/ios.svg" alt="iPhone / iPad">
-        <p>iPhone / iPad</p>
-      </div>
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/chrome.svg" alt="Chrome">
-        <p>Chrome</p>
-      </div>
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/safari.svg" alt="Safari">
-        <p>Safari</p>
-      </div>
-
-      <div class="compat-item">
-        <img src="/assets/images/logos/firefox.svg" alt="Firefox">
-        <p>Firefox</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 InterviuCetatenie.ro – parte din rețeaua CivicLearn.</div>
-    <div class="footer-links">
-      <a href="https://civiclearn.com/insights">Insights</a>
-      <a href="/test-gratuit.html">Test gratuit</a>
-      <a href="/despre-interviu.html">Despre interviu</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/confidentialitate.html">Confidențialitate</a>
-      <a href="/termeni.html">Termeni</a>
-    </div>
-  </div>
-</footer>
-
-<script src="/assets/js/hometest.js"></script>
 <script>
-document.querySelectorAll(".faq-item").forEach(item => {
-  const q = item.querySelector(".faq-question");
-
-  q.addEventListener("click", () => {
-    document.querySelectorAll(".faq-item").forEach(i => {
-      if (i !== item) i.classList.remove("open");
-    });
-    item.classList.toggle("open");
-  });
-});
+(function(){
+  var s=document.getElementById('sticky-cta'), h=document.getElementById('hero-cta'), p=document.getElementById('pricing'), q=document.getElementById('intrebari-proba');
+  if(!('IntersectionObserver' in window)||!s||!h) return;
+  var heroGone=false, priceVisible=false, quizVisible=false;
+  function upd(){var on=heroGone&&!priceVisible&&!quizVisible;s.classList.toggle('show',on);s.setAttribute('aria-hidden',on?'false':'true');}
+  new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;upd();}).observe(h);
+  if(p) new IntersectionObserver(function(e){priceVisible=e[0].isIntersecting;upd();},{threshold:.15}).observe(p);
+  if(q) new IntersectionObserver(function(e){quizVisible=e[0].isIntersecting;upd();},{threshold:.05}).observe(q);
+})();
 </script>
-
-
-
-
-
+<script>
+/* Phones: free questions become a swipeable row and auto-advance after each answer */
+(function(){
+  var c=document.getElementById('inline-test-questions'); if(!c||!window.matchMedia) return;
+  var mq=window.matchMedia('(max-width:860px)');
+  c.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('.inline-option-btn'); if(!b||!mq.matches) return;
+    var card=b.closest('.inline-question-card'); if(!card) return;
+    var wrong=!!card.querySelector('.inline-wrong');
+    setTimeout(function(){
+      var n=card.nextElementSibling; if(!n) return;
+      var pad=parseInt(getComputedStyle(c).paddingLeft,10)||0;
+      c.scrollTo({left:n.offsetLeft-pad,behavior:'smooth'});
+    }, wrong?2000:1000);
+  });
+})();
+</script>
 </body>
 </html>
