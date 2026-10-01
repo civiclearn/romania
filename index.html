@@ -333,15 +333,12 @@
     const list = await res.json();
     if (!Array.isArray(list) || !list.length) return;
     const picks = [...list].sort(() => Math.random() - 0.5).slice(0, 8);
-    el.innerHTML = picks.map(a => `
-      <a href="${a.url}" class="ha-card">
-        <img src="${a.image}" alt="${a.title}" onerror="this.style.display='none'">
-        <div class="ha-body">
-          <h3>${a.title}</h3>
-          <p>${a.desc || ''}</p>
-        </div>
-      </a>
-    `).join('');
+    el.innerHTML = picks.map(a => {
+        const url = a.url || ('/articole/' + a.slug + '/');
+        const img = a.image ? `<img src="${a.image}" alt="" onerror="this.style.display='none'">` : '';
+        const desc = (a.desc || a.excerpt || '').replace(/<[^>]*>/g, '');
+        return `<a href="${url}" class="ha-card">${img}<div class="ha-body"><h3>${a.title}</h3><p>${desc.length > 140 ? desc.slice(0, 137) + '…' : desc}</p></div></a>`;
+      }).join('');
   } catch (e) { /* leave the section empty if the fetch fails */ }
 })();
 </script>
